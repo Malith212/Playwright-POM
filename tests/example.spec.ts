@@ -1,18 +1,26 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, Page } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test('Login', async ({ page }: { page: Page }) => {
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
+    // Locators
+    const email = page.locator("//input[@type='email']");
+    const password = page.locator("//input[@type='password']");
+    const loginBtn = page.locator("//input[@type='submit']");
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+    // Test Data
+    const emailValue: string = "navindumalith0@gmail.com";
+    const passwordValue: string = "Malith123@";
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
+    // Navigate
+    await page.goto('https://rahulshettyacademy.com/client');
 
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+    // Actions
+    await email.fill(emailValue);
+    await password.fill(passwordValue);
+    await loginBtn.click();
+
+    // Assertion (IMPORTANT)
+    await expect(page).toHaveURL('https://rahulshettyacademy.com/client/#/dashboard/dash');
+
+
 });
