@@ -1,0 +1,113 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-feature;successful-login",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Successful login",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user is on the login page",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3757468124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user enters valid credentials",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 110241458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "user should be redirected to dashboard",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 454792916
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-feature;unsuccessful-login",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "unSuccessful login",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "user is on the login page",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3106540500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user enters invalid credentials",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 111255125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "user should see an error message",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78632832
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-feature",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login Feature",
+    "tags": [],
+    "uri": "features/login.feature"
+  }
+]
