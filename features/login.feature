@@ -1,7 +1,6 @@
 Feature: Login Feature
 
   Scenario: Successful login
-    Given user navigates to login page
-    When user enters valid email and password
-    And clicks on login button
+    Given user is on the login page
+    When user enters valid credentials
     Then user should be redirected to dashboard
