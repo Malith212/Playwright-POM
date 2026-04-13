@@ -7,7 +7,7 @@ let browser: Browser;
 let page: Page;
 let loginPage: LoginPage;
 
-Given('user navigates to login page', async function () {
+Given('user is on the login page', async function () {
     browser = await chromium.launch({ headless: false });
     page = await browser.newPage();
     loginPage = new LoginPage(page);
@@ -15,7 +15,7 @@ Given('user navigates to login page', async function () {
     await loginPage.navigate();
 });
 
-When('user enters valid email and password', async function () {
+When('user enters valid credentials', async function () {
     await loginPage.login('navindumalith0@gmail.com', 'Malith123@');
 });
 
