@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4232588083
+              "duration": 4013481125
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 110679458
+              "duration": 128827333
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 457015209
+              "duration": 456312416
             }
           }
         ],
@@ -69,7 +69,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2976864625
+              "duration": 3623835792
             }
           },
           {
@@ -82,7 +82,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 89185542
+              "duration": 107166707
             }
           },
           {
@@ -95,7 +95,157 @@
             },
             "result": {
               "status": "passed",
-              "duration": 74393249
+              "duration": 75646082
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-feature;empty-credentials",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Empty credentials",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "user is on the login page",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2320822125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "user leaves the username and password fields empty",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72872667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "user should see a validation message",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 86641166
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-feature;empty-password",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Empty password",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "user is on the login page",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2105171416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "user leaves the password field empty",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 102934374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "user should see a password validation message",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73492374
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-feature;empty-email",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Empty email",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "user is on the login page",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2660439250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "user leaves the email field empty",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113790332
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "user should see an email validation message",
+            "match": {
+              "location": "step-definitions/loginSteps.ts:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68300250
             }
           }
         ],
