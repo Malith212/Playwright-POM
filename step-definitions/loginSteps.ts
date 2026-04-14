@@ -27,3 +27,13 @@ Then('user should be redirected to dashboard', async function () {
     await expect(page).toHaveURL('https://rahulshettyacademy.com/client/#/dashboard/dash');
     await browser.close();
 });
+
+
+When('user enters invalid credentials', async function () {
+    await loginPage.login('invalid@gmail.com', 'Invalid123@');
+});
+
+Then('user should see an error message', async function () {
+        await expect(page).toHaveURL('https://rahulshettyacademy.com/client/#/auth/login');
+        await browser.close();
+});
