@@ -37,3 +37,37 @@ Then('user should see an error message', async function () {
         await expect(page).toHaveURL('https://rahulshettyacademy.com/client/#/auth/login');
         await browser.close();
 });
+
+When('user leaves the username and password fields empty', async function () {
+    await loginPage.emptyCredentials();
+});
+
+Then('user should see a validation message', async function () {
+    const emailErrorMessage = await loginPage.getEmailErrorMessage();
+    const passwordErrorMessage = await loginPage.getPasswordErrorMessage();
+
+    expect(emailErrorMessage).toBe('*Email is required');
+    expect(passwordErrorMessage).toBe('*Password is required');
+
+    await browser.close();
+});
+
+When('user leaves the password field empty', async function () {
+    await loginPage.emptyPassword('invalid@gmail.com', '');
+});
+
+Then('user should see a password validation message', async function () {
+    const passwordErrorMessage = await loginPage.getPasswordErrorMessage();
+    expect(passwordErrorMessage).toBe('*Password is required');
+    await browser.close();
+});
+
+When('user leaves the email field empty', async function () {
+    await loginPage.emptyEmail('', 'Invalid123@');
+});
+
+Then('user should see an email validation message', async function () {
+    const emailErrorMessage = await loginPage.getEmailErrorMessage();
+    expect(emailErrorMessage).toBe('*Email is required');
+    await browser.close();
+});
