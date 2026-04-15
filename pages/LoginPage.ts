@@ -9,11 +9,11 @@ export class LoginPage {
     }
 
     // Locators
-    private email = "//input[@type='email']";
-    private password = "//input[@type='password']";
-    private loginBtn = "//input[@type='submit']";
-    private passwordErrorMessage = "//div[text()='*Password is required']";
-    private emailErrorMessage = "//div[text()='*Email is required']";
+    private email: string = "//input[@type='email']";
+    private password: string = "//input[@type='password']";
+    private loginBtn: string = "//input[@type='submit']";
+    private passwordErrorMessage: string = "//div[text()='*Password is required']";
+    private emailErrorMessage: string = "//div[text()='*Email is required']";
 
     // Actions
     async navigate() {
